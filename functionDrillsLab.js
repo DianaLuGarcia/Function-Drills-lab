@@ -43,9 +43,9 @@ const reader = readline.createInterface({
 
 reader.question("Hi! Whats your name?  ", function(printName){
 	userName = printName;
+  console.log('Hi',userName,'!');
 
   reader.close()
-console.log(userName);
 });
 ////////////////// PROBLEM 4 ////////////////////
 /*
@@ -58,19 +58,10 @@ console.log(userName);
   Make sure to call your function and pass in an argument.
 */
 
-const readline = require('readline');
-
-const reader = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
-
-reader.question("Hi! Whats your name?  ", function(printName){
-	userName = printName;
-
-  reader.close()
-console.log('Hello',userName,'!');
-
+const greeting = (name) => {
+  const stringName = String(name);
+  console.log('Hello', stringName);
+}
 ////////////////// PROBLEM 5 ////////////////////
 
 /*
@@ -81,19 +72,14 @@ console.log('Hello',userName,'!');
 
     Brownie points if you use a ternary statement (only spend significant time on this if you have wiggle room)
 */
-const input[x,y];
-const compareNums => { Math.max(...input);}
 
-reader.question("What would you like to calculate?", function(input){
-	tokens = input.split(' ');
-	
-	mathSymbol = tokens[0];
-	num1 = Number(tokens[1]);
-	num2 = Number(tokens[2]);
 
-	console.log("mathSymbol:", mathSymbol);
-	console.log("num1:", num1);
-	console.log("num2:", num2);
+
+// function compareNums(num1, num2) {
+//   Math.max(compareNums()
+// }
+
+// compareNums(3, 9)
 
 ////////////////// PROBLEM 6 ////////////////////
 /*
@@ -103,8 +89,12 @@ reader.question("What would you like to calculate?", function(input){
   Create a variable outside the function called 'sum' and set it equal to add invoked (called), passing in 2 arguments.
 */
 
-//CODE HERE
+let sum = add(4, 3) 
 
+function add(a, b) {
+  return a + b;             // Function returns the product of a and b
+}
+console.log(sum);
 
 ////////////////// PROBLEM 7 ////////////////////
 
@@ -118,23 +108,11 @@ const exclaim = function(str) {
 }
 
 // arrow
-// declaration
-// expression
-
-
-
-////////////////// PROBLEM 8 ////////////////////
-
-/*
-  Which syntax was used to create the function below?
-  Uncomment the answer underneath.
-*/
-
-const exclaimTwo = str => {
+let exclaimTwo = str => {
   return str.toUpperCase() + '!!!'
 }
 
-// arrow
+//arrow
 // declaration
 // expression
 
@@ -145,8 +123,9 @@ const exclaimTwo = str => {
   Brownie points if you use a template string
 */
 
+exclaimTwo = str => str.toUpperCase() + '!!!'
 
-
+console.log(exclaimTwo('diana'));
 ////////////////// PROBLEM 9 ////////////////////
 
 /*
@@ -172,7 +151,16 @@ function exclaimFour(str) {
   Create a variable called 'nameGreeting' and set it equal to your function invoked (called) passing in an argument.
 */
 
-//CODE HERE
+function nameCheck(name){
+  if(name.includes('steven')){
+    console.log('What is up Steven?');
+  }else if (name.includes('bryan')){
+    console.log('Hey Bryan!');
+  }else {
+    console.log('Cool name',name,'!');
+  }
+  }
+let nameGreeting = nameCheck('kiko');
 
 
 ////////////////// PROBLEM 11 ////////////////////
@@ -185,7 +173,9 @@ function exclaimFour(str) {
   Create a variable called 'colorRating' and set it equal to faveColorFinder invoked (called), passing in an argument.
 */
 
-//CODE HERE
+function favColorFinder(color){
+
+}
 
 
 ////////////////// PROBLEM 12 ////////////////////
