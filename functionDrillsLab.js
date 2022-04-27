@@ -47,6 +47,10 @@ reader.question("Hi! Whats your name?  ", function(printName){
 
   reader.close()
 });
+
+//get rid of the reader
+
+
 ////////////////// PROBLEM 4 ////////////////////
 /*
   Create a function called greeting that
@@ -72,7 +76,31 @@ const greeting = (name) => {
 
     Brownie points if you use a ternary statement (only spend significant time on this if you have wiggle room)
 */
+const compareNums = (num1,num2) => {
+//if
+  if (num1 > num2) {
+    return num1;
+  }else if (num2 > num1){
+    return num2;
+  }else{
+    return num2; //it doesnt matter which one you return because they are the same
+  }
+  //secret
+/*return Math.max(num1,num2);*/
+// Ternary
+/*return num1 > num2 ? num1 : num2; */
+};
+/*This will also work (it is a shortened version of the code above, 
+  if num1 is not greater than num2 the only other solution is that num2 is greater: 
+  
+  if (num1 > num2){
+  return num1;
+}else {
+  return num2;
+}*/
 
+const biggerNum = compareNums(5,10);
+console.log(compareNums(biggerNum));
 
 
 // function compareNums(num1, num2) {
@@ -307,9 +335,9 @@ let trimmed = email.trim();
 let atSymb = email.includes()
 //const emailSymbol = Boolean('@');
 if (atSymb == true){
-  return 'email verified' + trimmed;
+  return 'email verified' + ' ' + trimmed;
 }else {
-  return 'email not verified' + trimmed;
+  return 'email not verified' + ' ' + trimmed;
 }
 }
 let email = '  noSpace ';
@@ -402,16 +430,16 @@ function pond() {
 */
 
 //This array should contain the variable names (as strings) accessible in the global scope.
-let globalScope = [duck]
-console.log(globalScope);
+let globalScope = ['duck']
+//console.log(globalScope.string);
 
 //This array should contain the variable names (as strings) accessible in the bathroom function.
-let bathroomScope = [rubberDuck,sailorDuck]
-console.log(bathroomScope);
+let bathroomScope = ('realDuck,sailorDuck');
+//console.log(bathroomScope.string);
 
 //This array should contain the variable names (as strings) accessible in the bathtub function.
-let bathtubScope = [sailorDuck]
-console.log(bathtubScope);
+let bathtubScope = ['sailorDuck'];
+//console.log(bathtubScope.string);
 //This array should contain the variable names (as strings) accessible in the pond function.
-let pondScope = [realDuck]
-console.log(pond);
+let pondScope = ['realDuck']
+//console.log(pondScope.string);
